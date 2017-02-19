@@ -17,3 +17,5 @@ RUN /codeformatter/src/ExternalApis/msbuild/msbuild /codeformatter/src/CodeForma
 
 VOLUME /code
 WORKDIR /code
+
+CMD mono /codeformatter/bin/CodeFormatter/Debug/CodeFormatter.exe /rule-:NewLineAbove,UnicodeLiterals codeformatter.csproj

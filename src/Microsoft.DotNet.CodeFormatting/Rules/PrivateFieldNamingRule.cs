@@ -106,6 +106,7 @@ namespace Microsoft.DotNet.CodeFormatting.Rules
                     name = char.ToLower(name[0]) + name.Substring(1);
                 }
 
+                /**** Don't prefix variables with s_ or t_
                 if (fieldSymbol.IsStatic)
                 {
                     // Check for ThreadStatic private fields.
@@ -118,6 +119,7 @@ namespace Microsoft.DotNet.CodeFormatting.Rules
                         return "s_" + name;
                     }
                 }
+                ****/
 
                 return "_" + name;
             }
